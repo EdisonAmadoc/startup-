@@ -1,180 +1,163 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0B0F17">
-    
-    <!-- SEO y Meta Description -->
-    <title>PULSE TECH - Hardware de Alto Rendimiento para Startups</title>
-    <meta name="description" content="PULSE TECH: Hardware de alto rendimiento y ensamblajes optimizados para gaming y creación de contenido.">
-    
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <title>PULSE TECH - Startup Hardware & Performance</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (window.tailwind) {
-                tailwind.config = {
-                    theme: {
-                        extend: {
-                            colors: {
-                                'pulse-black': '#0B0F17',
-                                'pulse-cyan': '#00F0FF',
-                                'pulse-indigo': '#6366F1',
-                            }
-                        }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pulse-black': '#0B0F17',
+                        'pulse-dark': '#111827',
+                        'pulse-cyan': '#00F0FF',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 25px rgba(0, 240, 255, 0.4)',
                     }
-                };
+                }
             }
-        });
+        }
     </script>
-
-    <style>
-        html { scroll-behavior: smooth; }
-        body { background-color: #0B0F17; color: #f3f4f6; }
-        .glow-cyan { box-shadow: 0 0 15px rgba(0, 240, 255, 0.3); }
-        .glow-cyan-strong { box-shadow: 0 0 25px rgba(0, 240, 255, 0.6); }
-        .text-glow { text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
-    </style>
 </head>
-<body class="font-sans antialiased">
+<body class="bg-pulse-black text-gray-100 font-sans antialiased selection:bg-pulse-cyan selection:text-pulse-black">
 
-    <!-- HEADER -->
-    <header class="fixed w-full top-0 z-50 bg-pulse-black/90 backdrop-blur-md border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-extrabold tracking-tighter text-white">
-                PULSE<span class="text-pulse-cyan">TECH</span>
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="fixed w-full top-0 z-50 bg-pulse-black/80 backdrop-blur-md border-b border-gray-800/80">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tight text-white">
+                PULSE<span class="text-pulse-cyan drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]">TECH</span>
             </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-gray-300">
                 <a href="#hero" class="hover:text-pulse-cyan transition">Inicio</a>
-                <a href="#beneficios" class="hover:text-pulse-cyan transition">Beneficios</a>
-                <a href="#faq" class="hover:text-pulse-cyan transition">FAQ</a>
+                <a href="#beneficios" class="hover:text-pulse-cyan transition">Ventajas</a>
+                <a href="#cta" class="hover:text-pulse-cyan transition">Suscripción</a>
             </nav>
-            <a href="#cta" class="bg-pulse-cyan text-pulse-black px-5 py-2 rounded-md font-bold text-sm hover:bg-white transition glow-cyan">
-                Suscribirse
+            <a href="#cta" class="bg-pulse-cyan text-pulse-black px-5 py-2 rounded-lg font-bold text-sm hover:bg-white transition shadow-glow">
+                Acceso VIP
             </a>
         </div>
     </header>
 
-    <main>
-        <!-- HERO -->
-        <section id="hero" class="relative pt-36 pb-24 px-6 overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-pulse-indigo/20 via-pulse-black to-pulse-black"></div>
-            <div class="max-w-7xl mx-auto relative z-10 text-center">
-                <div class="inline-block mb-4 px-4 py-1 border border-pulse-cyan/30 rounded-full text-pulse-cyan text-xs font-mono tracking-widest uppercase bg-pulse-cyan/5">
-                    🚀 Rendimiento sin límites
-                </div>
-                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
-                    Potencia tu <span class="text-pulse-cyan text-glow">Setup</span> al Siguiente Nivel
-                </h1>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-                    Hardware de alta velocidad, componentes seleccionados a mano y ensamblajes optimizados para gaming y creación de contenido.
-                </p>
-                <a href="#cta" class="inline-block bg-pulse-cyan text-pulse-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-white transition glow-cyan-strong">
-                    Únete a la Comunidad
+    <!-- SECCIÓN HERO -->
+    <section id="hero" class="relative pt-36 pb-20 px-6 text-center overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-pulse-cyan/10 via-transparent to-transparent pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-widest text-pulse-cyan uppercase border border-pulse-cyan/30 rounded-full bg-pulse-cyan/5">
+                ⚡ Startup de Hardware & Permission Marketing
+            </span>
+            
+            <h1 class="text-5xl sm:text-7xl font-black text-white tracking-tight mb-6 leading-tight">
+                Potencia Tu Setup Sin <span class="text-pulse-cyan drop-shadow-[0_0_15px_rgba(0,240,255,0.6)]">Límites</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Construimos un canal de comunicación directo. Recibe asesoría técnica personalizada y ensambles optimizados sin intermediarios ni algoritmos.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#cta" class="bg-pulse-cyan text-pulse-black font-extrabold px-8 py-4 rounded-xl text-lg hover:bg-white transition shadow-glow">
+                    Unirme al Newsletter
                 </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- BENEFICIOS -->
-        <section id="beneficios" class="py-20 px-6 border-t border-gray-800">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div class="p-8 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-pulse-cyan/50 transition">
-                    <div class="text-pulse-cyan text-3xl mb-4">⚡</div>
-                    <h2 class="text-xl font-bold text-white mb-2">Latencia Mínima</h2>
-                    <p class="text-gray-400 text-sm">Componentes optimizados para el menor tiempo de respuesta en competitivo.</p>
-                </div>
-                <div class="p-8 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-pulse-cyan/50 transition">
-                    <div class="text-pulse-cyan text-3xl mb-4">🛡️</div>
-                    <h2 class="text-xl font-bold text-white mb-2">Garantía PULSE</h2>
-                    <p class="text-gray-400 text-sm">48 horas de pruebas de estrés y cobertura total de 3 años en componentes.</p>
-                </div>
-                <div class="p-8 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-pulse-cyan/50 transition">
-                    <div class="text-pulse-cyan text-3xl mb-4">🚀</div>
-                    <h2 class="text-xl font-bold text-white mb-2">Listo para Jugar</h2>
-                    <p class="text-gray-400 text-sm">Drivers actualizados y benchmarkeado. Solo conecta y domina.</p>
-                </div>
+    <!-- SECCIÓN VENTAJAS (CARACTERÍSTICAS DE EMAIL MARKETING) -->
+    <section id="beneficios" class="py-16 px-6 border-t border-gray-800/60 bg-pulse-dark/40">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 bg-pulse-dark border border-gray-800 rounded-2xl hover:border-pulse-cyan/50 transition duration-300">
+                <div class="text-pulse-cyan text-4xl mb-4">🎯</div>
+                <h3 class="text-xl font-bold text-white mb-2">Permission Marketing</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Captación ética de contactos con consentimiento explícito. Cero SPAM, solo valor real.</p>
             </div>
-        </section>
-
-        <!-- FORMULARIO EMAILJS (1 SOLO CAMPO EMAIL) -->
-        <section id="cta" class="py-24 px-6 bg-gradient-to-b from-pulse-black to-gray-900">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Suscríbete a nuestro Newsletter</h2>
-                <p class="text-gray-400 mb-10">Déjanos tu correo para recibir acceso anticipado y promociones exclusivas.</p>
-
-                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl shadow-2xl">
-                    <form id="subscribe-form" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <input type="email" id="user_email" name="user_email" placeholder="Tu correo electrónico" required 
-                               class="w-full sm:w-2/3 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-pulse-cyan">
-                        <button type="submit" 
-                                class="w-full sm:w-1/3 bg-pulse-cyan text-pulse-black px-6 py-3 rounded-lg font-bold hover:bg-white transition glow-cyan">
-                            Suscribirme
-                        </button>
-                    </form>
-                    <p id="status-message" class="mt-4 text-center font-bold text-sm hidden"></p>
-                </div>
+            <div class="p-8 bg-pulse-dark border border-gray-800 rounded-2xl hover:border-pulse-cyan/50 transition duration-300">
+                <div class="text-pulse-cyan text-4xl mb-4">⚡</div>
+                <h3 class="text-xl font-bold text-white mb-2">CSS Inline Adaptable</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Diseños de correo compatibles con cualquier cliente, desde Gmail hasta Outlook.</p>
             </div>
-        </section>
-
-        <!-- SCRIPT EMAILJS CONFIGURADO CON TUS DATOS -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script type="text/javascript">
-            const SERVICE_ID = "service_k6rjseh";
-            const TEMPLATE_ID = "template_hms0g4p";
-            const PUBLIC_KEY = "dfcpOpWBmv0_JEOC0";
-
-            // Inicializar EmailJS
-            emailjs.init(PUBLIC_KEY);
-
-            document.getElementById('subscribe-form').addEventListener('submit', function(event) {
-                event.preventDefault(); 
-                
-                const statusMessage = document.getElementById('status-message');
-                statusMessage.style.display = 'block';
-                statusMessage.innerText = 'Enviando...';
-                statusMessage.className = 'mt-4 text-center font-bold text-sm text-gray-400';
-
-                // Envío mediante EmailJS
-                emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
-                  .then(function(response) {
-                      console.log('¡Éxito!', response.status, response.text);
-                      statusMessage.innerText = '¡Suscripción exitosa! Revisa tu correo.';
-                      statusMessage.className = 'mt-4 text-center font-bold text-sm text-green-400';
-                      document.getElementById('subscribe-form').reset();
-                  }, function(error) {
-                      console.error('Error EmailJS:', error);
-                      statusMessage.innerText = 'Hubo un error al enviar el correo: ' + (error.text || error.message || 'Error de conexión');
-                      statusMessage.className = 'mt-4 text-center font-bold text-sm text-red-400';
-                  });
-            });
-        </script>
-
-        <!-- FAQ -->
-        <section id="faq" class="py-20 px-6 max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">Preguntas Frecuentes</h2>
-            <div class="space-y-4">
-                <details class="bg-gray-900/50 border border-gray-800 p-6 rounded-lg group">
-                    <summary class="font-bold cursor-pointer text-lg text-white outline-none group-open:text-pulse-cyan transition">¿Los componentes son nuevos?</summary>
-                    <p class="mt-4 text-gray-400">Sí, todos nuestros componentes son nuevos, sellados y con garantía de fábrica.</p>
-                </details>
-                <details class="bg-gray-900/50 border border-gray-800 p-6 rounded-lg group">
-                    <summary class="font-bold cursor-pointer text-lg text-white outline-none group-open:text-pulse-cyan transition">¿Puedo personalizar mi rig?</summary>
-                    <p class="mt-4 text-gray-400">Absolutamente. Contacta a un asesor para personalizar tu ensamble.</p>
-                </details>
+            <div class="p-8 bg-pulse-dark border border-gray-800 rounded-2xl hover:border-pulse-cyan/50 transition duration-300">
+                <div class="text-pulse-cyan text-4xl mb-4">📈</div>
+                <h3 class="text-xl font-bold text-white mb-2">Retención en Piloto Automático</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Secuencias lógicas de bienvenida que convierten registros pasivos en clientes recurrentes.</p>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CTA: FORMULARIO DE CAPTACIÓN (1 SOLO CAMPO) -->
+    <section id="cta" class="py-24 px-6 relative">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-5xl font-black text-white mb-4">Suscríbete al Newsletter</h2>
+            <p class="text-gray-400 mb-8 max-w-lg mx-auto text-sm sm:text-base">
+                Ingresa tu dirección de correo electrónico para recibir nuestra secuencia de bienvenida automática.
+            </p>
+
+            <!-- Tarjeta del Formulario -->
+            <div class="bg-pulse-dark border border-gray-800 p-8 sm:p-10 rounded-3xl shadow-2xl relative">
+                <form id="subscribe-form" class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" id="user_email" name="user_email" placeholder="Ingresa tu correo electrónico" required 
+                           class="w-full sm:w-2/3 px-5 py-4 rounded-xl bg-pulse-black border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-pulse-cyan focus:ring-1 focus:ring-pulse-cyan transition">
+                    
+                    <button type="submit" id="btn-submit" 
+                            class="w-full sm:w-1/3 bg-pulse-cyan text-pulse-black font-black px-6 py-4 rounded-xl hover:bg-white transition shadow-glow">
+                        Suscribirme
+                    </button>
+                </form>
+
+                <p id="status-message" class="mt-4 font-bold text-sm hidden"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPT EMAILJS MEJORADO -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        const PUBLIC_KEY = "dfcpOpWBmv0_JEOC0";
+        const SERVICE_ID = "service_k6rjseh";
+        const TEMPLATE_ID = "template_usbt7ct";
+
+        emailjs.init(PUBLIC_KEY);
+
+        document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('btn-submit');
+            const msg = document.getElementById('status-message');
+
+            btn.disabled = true;
+            btn.innerText = 'Enviando...';
+            msg.style.display = 'block';
+            msg.className = 'mt-4 font-bold text-sm text-gray-400';
+            msg.innerText = 'Procesando tu suscripción...';
+
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
+                .then(function(res) {
+                    console.log("¡Éxito!", res.status);
+                    msg.className = 'mt-4 font-bold text-sm text-green-400';
+                    msg.innerText = '¡Suscripción exitosa! Revisa tu correo electrónico.';
+                    document.getElementById('subscribe-form').reset();
+                    btn.disabled = false;
+                    btn.innerText = 'Suscribirme';
+                }, function(err) {
+                    console.error("Error EmailJS:", err);
+                    msg.className = 'mt-4 font-bold text-sm text-red-400';
+                    msg.innerText = 'Error al enviar: ' + (err.text || 'Revisa la configuración en EmailJS');
+                    btn.disabled = false;
+                    btn.innerText = 'Suscribirme';
+                });
+        });
+    </script>
 
     <!-- FOOTER -->
-    <footer class="py-8 bg-pulse-black border-t border-gray-800 text-gray-500 text-center text-sm">
-        <div class="mb-3 text-xl font-extrabold tracking-tighter text-white">
-            PULSE<span class="text-pulse-cyan">TECH</span>
-        </div>
-        <p>&copy; 2026 PULSE TECH. Proyecto Académico Startup.</p>
+    <footer class="py-8 border-t border-gray-800/80 text-center text-gray-500 text-xs">
+        <p>&copy; 2026 PULSE TECH Startup. Proyecto Académico de Email Marketing.</p>
     </footer>
+
 </body>
 </html>
