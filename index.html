@@ -120,10 +120,15 @@
             </div>
         </section>
 
-        <!-- SCRIPT EMAILJS -->
+        <!-- SCRIPT EMAILJS CONFIGURADO CON TUS DATOS -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script type="text/javascript">
-            emailjs.init("dfcpOpWBmv0_JEOC0");
+            const SERVICE_ID = "service_k6rjseh";
+            const TEMPLATE_ID = "template_usbt7ct";
+            const PUBLIC_KEY = "dfcpOpWBmv0_JEOC0";
+
+            // Inicializar EmailJS
+            emailjs.init(PUBLIC_KEY);
 
             document.getElementById('subscribe-form').addEventListener('submit', function(event) {
                 event.preventDefault(); 
@@ -133,16 +138,17 @@
                 statusMessage.innerText = 'Enviando...';
                 statusMessage.className = 'mt-4 text-center font-bold text-sm text-gray-400';
 
-                // Reemplaza TU_SERVICE_ID y TU_TEMPLATE_ID aquí
-                emailjs.sendForm('TU_SERVICE_ID', 'TU_TEMPLATE_ID', this)
-                  .then(function() {
+                // Envío mediante EmailJS
+                emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
+                  .then(function(response) {
+                      console.log('¡Éxito!', response.status, response.text);
                       statusMessage.innerText = '¡Suscripción exitosa! Revisa tu correo.';
                       statusMessage.className = 'mt-4 text-center font-bold text-sm text-green-400';
                       document.getElementById('subscribe-form').reset();
                   }, function(error) {
-                      statusMessage.innerText = 'Hubo un error al enviar el correo.';
+                      console.error('Error EmailJS:', error);
+                      statusMessage.innerText = 'Hubo un error al enviar el correo: ' + (error.text || error.message || 'Error de conexión');
                       statusMessage.className = 'mt-4 text-center font-bold text-sm text-red-400';
-                      console.log('Error:', error);
                   });
             });
         </script>
